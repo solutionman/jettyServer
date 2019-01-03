@@ -17,6 +17,7 @@ public class Main {
 
         accountService.addNewUser(new UserProfile("admin"));
         accountService.addNewUser(new UserProfile("test"));
+        accountService.addNewUser(new UserProfile("lom"));
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(new UsersServlet(accountService)), "/api/v1/users");
